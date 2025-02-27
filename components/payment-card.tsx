@@ -25,10 +25,10 @@ export function PaymentCard({
   return (
     <div
       className={cn(
-        "h-fit bg-violet-100 px-6 py-10 rounded-2xl mt-[30px]",
+        "h-fit bg-violet-100 px-6 py-10 rounded-2xl lg:mt-[30px]",
         "dark:text-violet-50 dark:bg-grey-700",
         recommended &&
-          "py-[70px] dark:bg-violet-700 dark:text-gray-100 bg-violet-700 text-violet-50 mt-0 z-10"
+          "py-[70px] dark:bg-violet-700 dark:text-gray-100 bg-violet-700 text-violet-50 lg:mt-0 z-10 lg:-mx-2.5"
       )}
     >
       <h3

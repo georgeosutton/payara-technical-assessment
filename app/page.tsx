@@ -11,10 +11,10 @@ export default function Home() {
             powerful creators
           </span>
         </h1>
-        <p className="text-center text-gray-600 dark:text-gray-400 pb-[84px]">
+        <p className="text-center text-gray-600 dark:text-gray-400 pb-10 lg:pb-[84px]">
           Choose a plan that’s right for you
         </p>
-        <div className="grid justify-center grid-cols-[fit-content(378px)_fit-content(436px)_fit-content(378px)] max-w-[1440px] px-8 mx-auto">
+        <div className="grid justify-center grid-cols-[fit-content(436px)] lg:gap-0 gap-10 lg:max-w-none lg:grid-cols-[fit-content(378px)_fit-content(416px)_fit-content(378px)] max-w-[1440px] px-8 mx-auto">
           {plans.map(plan => (
             <PaymentCard key={plan.planType as string} {...plan} />
           ))}
