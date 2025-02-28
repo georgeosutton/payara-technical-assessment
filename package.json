@@ -29,7 +29,21 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.9",
     "postcss": "^8.5.3",
     "typescript": "^5"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ],
+    "tailwindAttributes": [
+      "classNames"
+    ],
+    "tailwindFunctions": [
+      "cn",
+      "cva"
+    ]
   }
 }

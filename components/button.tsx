@@ -10,12 +10,12 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary: cn(
-          "hover:bg-orange-600 bg-orange-500  text-violet-50",
-          "dark:hover:bg-violet-100 dark:bg-violet-50 dark:text-violet-700"
+          "bg-orange-500 text-violet-50 hover:bg-orange-600",
+          "dark:bg-violet-50 dark:text-violet-700 dark:hover:bg-violet-100",
         ),
         secondary: cn(
-          "bg-violet-100 border-violet-500 text-violet-700",
-          "dark:bg-grey-600 dark:text-violet-300 dark:hover:bg-grey-700 dark:border-violet-300"
+          "border-violet-500 bg-violet-100 text-violet-700",
+          "dark:bg-grey-600 dark:hover:bg-grey-700 dark:border-violet-300 dark:text-violet-300",
         ),
       },
       size: {
@@ -26,7 +26,7 @@ const buttonVariants = cva(
       variant: "primary",
       size: "default",
     },
-  }
+  },
 );
 
 export interface ButtonProps
@@ -46,7 +46,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       />
     );
-  }
+  },
 );
 Button.displayName = "Button";
 

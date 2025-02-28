@@ -1,0 +1,21 @@
+{
+  "name": "Next.js Dev Container",
+  "dockerFile": "Dockerfile",
+  "postCreateCommand": "pnpm install",
+  "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+  "remoteUser": "node",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "files.associations": {
+          "*.css": "tailwindcss"
+        }
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss"
+      ]
+    }
+  }
+}
