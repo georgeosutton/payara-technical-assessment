@@ -3,11 +3,11 @@ import { Plan, PlanType } from "./types";
 export const features: { text: string; plans: PlanType[] }[] = [
   {
     text: "20,000+ of PNG & SVG graphics",
-    plans: ["freebie"],
+    plans: ["freebie", "professional", "enterprise"],
   },
   {
     text: "Access to 100 million stock images",
-    plans: ["freebie"],
+    plans: ["freebie", "professional", "enterprise"],
   },
   {
     text: "Upload custom icons and fonts",
