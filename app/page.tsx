@@ -9,8 +9,8 @@ export default function Home() {
   const [yearlyPricing, setYearlyPricing] = useState(false);
   return (
     <div>
-      <header className="fixed top-0 w-full">
-        <div className="max-w-[1440px] flex justify-between px-8 mx-auto h-20 items-center">
+      <header className="fixed top-0 w-full bg-violet-50 dark:bg-grey-800 z-20">
+        <div className="max-w-[1440px] flex justify-between px-8 mx-auto h-16 items-center">
           <ModeToggle />
           <div className="flex items-center gap-2">
             <Switch onClick={() => setYearlyPricing(!yearlyPricing)} />
@@ -18,7 +18,7 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <main className="pt-20">
+      <main className="py-20">
         <h1 className="text-5xl pt-18 pb-4 text-center font-bold text-violet-950 dark:text-violet-500">
           Powerful features for{" "}
           <span className="text-violet-600 dark:text-violet-50">
