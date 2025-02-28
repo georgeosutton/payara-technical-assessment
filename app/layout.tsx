@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { satoshi } from "../lib/fonts";
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: "Technical Assessment - Payara",
@@ -12,8 +13,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${satoshi.variable}`}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${satoshi.variable}`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

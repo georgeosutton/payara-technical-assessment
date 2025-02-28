@@ -9,6 +9,7 @@ export function PaymentCard({
   price,
   recommended,
   planType,
+  yearlyPricing,
 }: {
   title: string;
   description: string;
@@ -17,6 +18,7 @@ export function PaymentCard({
     yearly: string;
   };
   planType: PlanType;
+  yearlyPricing: boolean;
   features: {
     text: string;
     plans: PlanType[];
@@ -54,7 +56,10 @@ export function PaymentCard({
           !recommended && "text-violet-950 dark:text-gray-100"
         )}
       >
-        ${price.monthly} <span className="text-base font-medium">/ Month</span>
+        ${yearlyPricing ? price.yearly : price.monthly}{" "}
+        <span className="text-base font-medium">
+          / {yearlyPricing ? "Year" : "Month"}
+        </span>
       </p>
       <div className="pb-10">
         <Button
