@@ -1,6 +1,7 @@
 import { PlanType } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { Button } from "./button";
+import Price from "./price";
 
 export function PaymentCard({
   title,
@@ -9,7 +10,6 @@ export function PaymentCard({
   price,
   recommended,
   planType,
-  yearlyPricing,
 }: {
   title: string;
   description: string;
@@ -18,7 +18,7 @@ export function PaymentCard({
     yearly: string;
   };
   planType: PlanType;
-  yearlyPricing: boolean;
+
   features: {
     text: string;
     plans: PlanType[];
@@ -50,17 +50,7 @@ export function PaymentCard({
       >
         {description}
       </p>
-      <p
-        className={cn(
-          "flex items-center gap-1 pb-6 text-5xl font-bold",
-          !recommended && "text-violet-950 dark:text-gray-100",
-        )}
-      >
-        ${yearlyPricing ? price.yearly : price.monthly}{" "}
-        <span className="text-base font-medium">
-          / {yearlyPricing ? "Year" : "Month"}
-        </span>
-      </p>
+      <Price price={price} recommended={recommended} />
       <div className="pb-10">
         <Button
           variant={recommended ? "primary" : "secondary"}

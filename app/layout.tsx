@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { satoshi } from "../lib/fonts";
 import { ThemeProvider } from "next-themes";
+import { PricingProvider } from "@/contexts/PricingContext";
 
 export const metadata: Metadata = {
   title: "Technical Assessment - Payara",
@@ -15,14 +16,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${satoshi.variable}`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        <PricingProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </PricingProvider>
       </body>
     </html>
   );
