@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "./button";
 import Price from "./price";
 
-export function PaymentCard({
+export function PricingCard({
   title,
   description,
   features,
@@ -26,7 +26,7 @@ export function PaymentCard({
   recommended: boolean;
 }) {
   return (
-    <div
+    <li
       className={cn(
         "h-fit rounded-2xl bg-violet-100 px-6 py-10 lg:mt-[30px]",
         "dark:bg-grey-700 dark:text-violet-50",
@@ -119,6 +119,6 @@ export function PaymentCard({
           );
         })}
       </ul>
-    </div>
+    </li>
   );
 }
