@@ -2,6 +2,7 @@ import { PlanType } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { Button } from "./button";
 import Price from "./price";
+import NextLink from "next/link";
 
 export function PricingCard({
   title,
@@ -53,10 +54,11 @@ export function PricingCard({
       <Price price={price} recommended={recommended} />
       <div className="pb-10">
         <Button
+          asChild
           variant={recommended ? "primary" : "secondary"}
           className="w-full"
         >
-          Get Started Now
+          <NextLink href="#">Get Started Now</NextLink>
         </Button>
       </div>
       <ul className="flex flex-col gap-3">
