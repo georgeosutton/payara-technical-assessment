@@ -3,7 +3,6 @@
   "dockerComposeFile": ["./docker-compose.yml"],
   "service": "app",
   "workspaceFolder": "/workspace/${localWorkspaceFolderBasename}",
-  "postCreateCommand": "pnpm install",
   "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
   "initializeCommand": "echo COMPOSE_PROJECT_NAME=${localWorkspaceFolderBasename} > .devcontainer/.env",
   "remoteUser": "node",
