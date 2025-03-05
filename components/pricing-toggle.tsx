@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { Switch } from "./switch";
-import { usePricing } from "@/contexts/PricingContext";
+import { usePricing } from "@/contexts/pricing-context";
 import { Label } from "./label";
 
 export function PricingToggle() {

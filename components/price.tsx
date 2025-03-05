@@ -1,5 +1,5 @@
 "use client";
-import { usePricing } from "@/contexts/PricingContext";
+import { usePricing } from "@/contexts/pricing-context";
 import { cn } from "@/lib/utils";
 import React from "react";
 
